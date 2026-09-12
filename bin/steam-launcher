@@ -1,0 +1,7 @@
+#!/bin/sh
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+NODE="$DIR/.node/bin/node"
+if [ ! -x "$NODE" ]; then
+	NODE="node"
+fi
+exec "$NODE" "$DIR/src/daemon.js" "$@"

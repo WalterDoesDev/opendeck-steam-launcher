@@ -1,0 +1,19 @@
+{
+	"name": "opendeck-steam-launcher",
+	"version": "1.0.0",
+	"description": "OpenDeck Dynamic Steam Launcher Daemon: paginated Steam game profiles that activate when Steam is the foreground window.",
+	"main": "src/daemon.js",
+	"bin": {
+		"opendeck-steam-launcher": "./bin/steam-launcher"
+	},
+	"license": "MIT",
+	"private": true,
+	"engines": {
+		"node": ">=21.5.0"
+	},
+	"scripts": {
+		"start": "node src/daemon.js",
+		"generate": "node src/daemon.js --once",
+		"scan": "node src/daemon.js --scan"
+	}
+}

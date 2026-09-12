@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenDeck Dynamic Steam Launcher Daemon
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:1
+EnvironmentFile=-%h/.config/opendeck-steam-launcher.env
+ExecStart=%h/opendeck-steam-daemon/bin/steam-launcher
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

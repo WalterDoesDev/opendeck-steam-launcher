@@ -1,0 +1,7 @@
+.node/
+node_modules/
+vendor/realesrgan/
+bin/enhance_icons
+bin/__pycache__/
+config.json
+*.log
